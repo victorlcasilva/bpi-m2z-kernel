@@ -60,7 +60,7 @@ applyDTSPatch() {
     if [ $ALREADYPATCHED -eq 1 ]; then
         echo "- Found bpi-m2-zero-v4.dtb in $KDTSDIR/Makefile, skipping patch"
     else
-        patch -d $KDIR -p1 < bpi-m2z-dts.patch
+        patch -d $KDIR -p1 < bpi-m2z-dts-patch
     fi
 
 }
