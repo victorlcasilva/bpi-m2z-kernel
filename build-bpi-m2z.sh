@@ -1,9 +1,13 @@
 #!/bin/sh
 
-CONFIG=m2z_lima_defconfig
+CONFIG=m2z_minimal_defconfig
 
 if [ "$1" = "docker" ]; then
     CONFIG=m2z_docker_defconfig
+fi
+
+if [ "$1" = "default" ]; then
+    CONFIG=m2z_lima_defconfig
 fi
 
 echo ""

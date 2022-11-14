@@ -8,7 +8,8 @@ DTB=arch/arm/boot/dts/bpi-m2-zero-v4.dtb
 KV=$(strings arch/arm/boot/Image | grep "Linux version" -m 1 | awk '{print $3}')
 
 if [ -z $KV ]; then
-    echo "\n  ERROR: No kernel version identified"
+    echo ""
+    echo "  ERROR: No kernel version identified"
     exit 1
 fi
 
@@ -24,7 +25,8 @@ checkFileExists() {
     F_PATH=$1
     echo "- Checking file $F_PATH"
     if [ ! -f $F_PATH ]; then
-        echo "\n  ERROR: Couldn't find file $F_PATH"
+        echo ""
+        echo "  ERROR: Couldn't find file $F_PATH"
         exit 1
     fi
 }
